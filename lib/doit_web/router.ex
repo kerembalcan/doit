@@ -23,11 +23,11 @@ defmodule DoitWeb.Router do
     pipe_through :api
 
     forward "/graphql", Absinthe.Plug,
-      schema: DoitWeb.Schema
+      schema: DoitWeb.GraphQL.Schema
 
       if Mix.env == :dev do
         forward "graphql", Absinthe.Plug.GraphiQL,
-          schema: DoitWeb.Schema
+          schema: DoitWeb.GraphQL.Schema
     end
   end
 

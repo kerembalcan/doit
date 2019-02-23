@@ -1,4 +1,4 @@
-defmodule DoitWeb.Schema do
+defmodule DoitWeb.GraphQL.Schema do
   use Absinthe.Schema
 
   query do
