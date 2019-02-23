@@ -26,7 +26,7 @@ defmodule DoitWeb.Router do
       schema: DoitWeb.GraphQL.Schema
 
       if Mix.env == :dev do
-        forward "graphql", Absinthe.Plug.GraphiQL,
+        forward "/graphql", Absinthe.Plug.GraphiQL,
           schema: DoitWeb.GraphQL.Schema
     end
   end
