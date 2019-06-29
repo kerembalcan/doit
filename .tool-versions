@@ -1,0 +1,4 @@
+erlang 21.0
+elixir 1.7.4
+postgres 10.8
+postgis 2.4.5
