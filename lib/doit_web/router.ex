@@ -11,6 +11,7 @@ defmodule DoitWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug DoitWeb.Context
   end
 
   scope "/", DoitWeb do

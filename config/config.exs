@@ -22,6 +22,16 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:user_id]
 
+# Configures Guardian
+config :doit, DoitWeb.Auth.Guardian,
+  issuer: "doit",
+  verify_issuer: true,
+  secret_key: "SroHPOVZiU1Zqxzdu6zwDSOHlicafsnKAESvW0hroKhowVIO4AYIq4FcQDja/c03",
+  permissions: %{
+    default: [:default],
+    admin: [:admin]
+  }
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
